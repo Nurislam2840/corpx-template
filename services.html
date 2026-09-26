@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services | CorpX — Web, Mobile, Marketing & Cloud</title>
+  <meta name="description" content="Explore CorpX services: web development, mobile apps, UI/UX design, digital marketing, and cloud solutions for growing businesses." />
+  <meta name="keywords" content="web development, mobile apps, digital marketing, ui ux design, cloud services" />
+  <link rel="canonical" href="https://corpx.com/services.html" />
+
+  <meta property="og:title" content="Our Services | CorpX" />
+  <meta property="og:description" content="Comprehensive digital services for modern businesses." />
+
+  <meta name="theme-color" content="#4f46e5" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%234f46e5'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='55' font-weight='bold' fill='white' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+
+  <style>
+    .page-hero {
+      background: var(--grad-hero);
+      padding: 120px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--grad-mesh);
+      opacity: 0.7;
+    }
+    .page-hero .container { position: relative; z-index: 2; }
+    .page-hero h1 {
+      color: #fff;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      margin-bottom: 16px;
+      font-weight: 800;
+    }
+    .page-hero p {
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: var(--fs-lg);
+    }
+    .breadcrumb {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+      font-size: var(--fs-sm);
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .breadcrumb a { color: var(--accent-light); }
+    .breadcrumb i { font-size: 10px; }
+
+    /* Pricing */
+    .pricing-card {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .pricing-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(79,70,229,0.3);
+    }
+    .pricing-card.featured {
+      background: var(--grad-primary);
+      color: #fff;
+      border-color: transparent;
+      transform: scale(1.03);
+      box-shadow: var(--shadow-primary);
+    }
+    .pricing-card.featured h3,
+    .pricing-card.featured .price,
+    .pricing-card.featured .price span { color: #fff; }
+    .pricing-card.featured .price span { opacity: 0.7; }
+    .pricing-card.featured ul li { color: rgba(255,255,255,0.9); }
+    .pricing-card.featured ul li i { color: #22d3ee; }
+    .pricing-badge {
+      position: absolute;
+      top: -14px;
+      right: 24px;
+      background: var(--highlight);
+      color: #fff;
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .pricing-card h3 {
+      font-size: var(--fs-xl);
+      margin-bottom: 8px;
+    }
+    .pricing-card > p {
+      font-size: var(--fs-sm);
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .pricing-card.featured > p { color: rgba(255,255,255,0.75); }
+    .price {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1;
+      color: var(--text-heading);
+      margin-bottom: 24px;
+    }
+    .price span {
+      font-size: var(--fs-sm);
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+    .pricing-card ul {
+      list-style: none;
+      margin-bottom: 28px;
+      flex-grow: 1;
+    }
+    .pricing-card ul li {
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: var(--fs-sm);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    .pricing-card.featured ul li { border-color: rgba(255,255,255,0.1); }
+    .pricing-card ul li:last-child { border-bottom: none; }
+    .pricing-card ul li i { color: var(--success); }
+    .pricing-card.featured .btn {
+      background: #fff;
+      color: var(--primary);
+    }
+    .pricing-card.featured .btn:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* Process */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-md);
+      position: relative;
+    }
+    .process-item {
+      text-align: center;
+      padding: 24px 16px;
+      position: relative;
+    }
+    .process-num {
+      width: 70px;
+      height: 70px;
+      background: var(--grad-primary);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin: 0 auto 20px;
+      position: relative;
+      box-shadow: 0 10px 25px rgba(79,70,229,0.3);
+    }
+    .process-item h4 {
+      font-size: var(--fs-base);
+      margin-bottom: 8px;
+    }
+    .process-item p { font-size: var(--fs-sm); margin: 0; }
+
+    @media (max-width: 992px) {
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .pricing-card.featured { transform: scale(1); }
+    }
+    @media (max-width: 480px) {
+      .process-grid { grid-template-columns: 1fr; }
+      .page-hero { padding: 90px 0 60px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-info">
+        <a href="tel:+8801234567890"><i class="fas fa-phone-volume"></i> +880 1234 567 890</a>
+        <a href="mailto:info@corpx.com"><i class="fas fa-envelope"></i> info@corpx.com</a>
+      </div>
+      <div class="topbar-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <span class="logo-mark"><i class="fas fa-cube"></i></span>
+        Corp<span>X</span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary"><i class="fas fa-rocket"></i> Get Started</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Our Services</h1>
+      <p>Comprehensive digital solutions designed to power your business forward</p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Services</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title reveal fade-up">
+        <span class="subtitle">What We Offer</span>
+        <h2>Services Built for Growth</h2>
+        <p>From strategy to execution, we cover the full digital spectrum.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="service-card reveal fade-up">
+          <div class="icon"><i class="fas fa-chart-pie"></i></div>
+          <h3>Business Strategy</h3>
+          <p>Data-driven strategies, market research, and growth planning that maximize ROI and market position.</p>
+          <a href="contact.html" class="read-more">Get Started <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card reveal fade-up delay-1">
+          <div class="icon"><i class="fas fa-code"></i></div>
+          <h3>Web Development</h3>
+          <p>Fast, secure, and scalable websites built with modern frameworks and best practices.</p>
+          <a href="contact.html" class="read-more">Get Started <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card reveal fade-up delay-2">
+          <div class="icon"><i class="fas fa-bullhorn"></i></div>
+          <h3>Digital Marketing</h3>
+          <p>SEO, social media, PPC, and content marketing campaigns that convert traffic into revenue.</p>
+          <a href="contact.html" class="read-more">Get Started <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card reveal fade-up">
+          <div class="icon"><i class="fas fa-palette"></i></div>
+          <h3>UI/UX Design</h3>
+          <p>Beautiful, user-centered interfaces that enhance engagement and boost conversion rates.</p>
+          <a href="contact.html" class="read-more">Get Started <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card reveal fade-up delay-1">
+          <div class="icon"><i class="fas fa-mobile-screen"></i></div>
+          <h3>Mobile Apps</h3>
+          <p>Native iOS, Android, and cross-platform apps that users love to engage with daily.</p>
+          <a href="contact.html" class="read-more">Get Started <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card reveal fade-up delay-2">
+          <div class="icon"><i class="fas fa-cloud"></i></div>
+          <h3>Cloud Solutions</h3>
+          <p>Scalable cloud infrastructure, DevOps, and migration services for modern enterprises.</p>
+          <a href="contact.html" class="read-more">Get Started <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-title reveal fade-up">
+        <span class="subtitle">How We Work</span>
+        <h2>Our Simple 4-Step Process</h2>
+        <p>From first call to final delivery — transparent and efficient.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-item reveal fade-up">
+          <div class="process-num">01</div>
+          <h4>Discovery</h4>
+          <p>We understand your goals, audience, and challenges.</p>
+        </div>
+        <div class="process-item reveal fade-up delay-1">
+          <div class="process-num">02</div>
+          <h4>Strategy</h4>
+          <p>We craft a tailored roadmap for your success.</p>
+        </div>
+        <div class="process-item reveal fade-up delay-2">
+          <div class="process-num">03</div>
+          <h4>Execution</h4>
+          <p>Our experts bring the plan to life with precision.</p>
+        </div>
+        <div class="process-item reveal fade-up delay-3">
+          <div class="process-num">04</div>
+          <h4>Support</h4>
+          <p>We provide ongoing care, updates, and optimization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title reveal fade-up">
+        <span class="subtitle">Pricing</span>
+        <h2>Flexible Plans for Every Business</h2>
+        <p>Choose the perfect plan. No hidden fees. Cancel anytime.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="pricing-card reveal fade-up">
+          <h3>Starter</h3>
+          <p>For small businesses getting started.</p>
+          <div class="price">$499<span>/project</span></div>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> 5-Page Website</li>
+            <li><i class="fas fa-check-circle"></i> Mobile Responsive</li>
+            <li><i class="fas fa-check-circle"></i> Basic SEO Setup</li>
+            <li><i class="fas fa-check-circle"></i> 30 Days Support</li>
+            <li><i class="fas fa-check-circle"></i> Contact Form</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline">Choose Plan</a>
+        </div>
+
+        <div class="pricing-card featured reveal fade-up delay-1">
+          <span class="pricing-badge">Popular</span>
+          <h3>Professional</h3>
+          <p>For growing businesses that need more.</p>
+          <div class="price">$1,499<span>/project</span></div>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> 15-Page Website</li>
+            <li><i class="fas fa-check-circle"></i> Custom Design</li>
+            <li><i class="fas fa-check-circle"></i> Advanced SEO</li>
+            <li><i class="fas fa-check-circle"></i> Analytics Setup</li>
+            <li><i class="fas fa-check-circle"></i> 90 Days Support</li>
+            <li><i class="fas fa-check-circle"></i> CMS Integration</li>
+          </ul>
+          <a href="contact.html" class="btn btn-white">Choose Plan</a>
+        </div>
+
+        <div class="pricing-card reveal fade-up delay-2">
+          <h3>Enterprise</h3>
+          <p>Custom solutions for large organizations.</p>
+          <div class="price">Custom</div>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Unlimited Pages</li>
+            <li><i class="fas fa-check-circle"></i> Dedicated Team</li>
+            <li><i class="fas fa-check-circle"></i> Premium Support</li>
+            <li><i class="fas fa-check-circle"></i> Custom Integrations</li>
+            <li><i class="fas fa-check-circle"></i> SLA Guarantee</li>
+            <li><i class="fas fa-check-circle"></i> Priority Delivery</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding: 0 0 var(--space-2xl);">
+    <div class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <div>
+            <h2>Not Sure Which Service You Need?</h2>
+            <p>Talk to our experts for free consultation.</p>
+          </div>
+          <a href="contact.html" class="btn btn-white">
+            Free Consultation <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo">
+            <span class="logo-mark"><i class="fas fa-cube"></i></span>
+            Corp<span>X</span>
+          </a>
+          <p>Empowering businesses with innovative digital solutions since 2014. Your success is our mission.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+            <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+            <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Web Development</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Mobile Apps</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> UI/UX Design</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Digital Marketing</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Cloud Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-location-dot"></i> 123 Business Avenue, Dhaka 1207, Bangladesh</li>
+            <li><i class="fas fa-phone"></i> +880 1234 567 890</li>
+            <li><i class="fas fa-envelope"></i> info@corpx.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CorpX. All rights reserved.</p>
+        <p>Made with <i class="fas fa-heart" style="color:#ef4444;"></i> by <a href="#">CorpX Team</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/scroll-animation.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | CorpX — Our Recent Work</title>
+  <meta name="description" content="Explore CorpX's portfolio — web development, mobile apps, branding, and digital design projects that delivered real results." />
+  <meta name="keywords" content="portfolio, projects, work, web design, mobile apps, branding" />
+  <link rel="canonical" href="https://corpx.com/portfolio.html" />
+
+  <meta property="og:title" content="Portfolio | CorpX" />
+  <meta property="og:description" content="See our latest work across industries." />
+
+  <meta name="theme-color" content="#4f46e5" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%234f46e5'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='55' font-weight='bold' fill='white' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+
+  <style>
+    .page-hero {
+      background: var(--grad-hero);
+      padding: 120px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--grad-mesh);
+      opacity: 0.7;
+    }
+    .page-hero .container { position: relative; z-index: 2; }
+    .page-hero h1 {
+      color: #fff;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      margin-bottom: 16px;
+      font-weight: 800;
+    }
+    .page-hero p {
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: var(--fs-lg);
+    }
+    .breadcrumb {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+      font-size: var(--fs-sm);
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .breadcrumb a { color: var(--accent-light); }
+    .breadcrumb i { font-size: 10px; }
+
+    /* Stats mini */
+    .mini-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .mini-stat {
+      text-align: center;
+      padding: 24px;
+      background: #fff;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+    .mini-stat:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(79,70,229,0.2);
+    }
+    .mini-stat h3 {
+      font-size: 2rem;
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 6px;
+    }
+    .mini-stat p {
+      font-size: var(--fs-sm);
+      color: var(--text-muted);
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .mini-stats { grid-template-columns: repeat(2, 1fr); }
+      .page-hero { padding: 90px 0 60px; }
+    }
+    @media (max-width: 480px) {
+      .mini-stats { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-info">
+        <a href="tel:+8801234567890"><i class="fas fa-phone-volume"></i> +880 1234 567 890</a>
+        <a href="mailto:info@corpx.com"><i class="fas fa-envelope"></i> info@corpx.com</a>
+      </div>
+      <div class="topbar-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <span class="logo-mark"><i class="fas fa-cube"></i></span>
+        Corp<span>X</span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary"><i class="fas fa-rocket"></i> Get Started</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Our Portfolio</h1>
+      <p>Real projects. Real results. Explore our latest work.</p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Portfolio</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="mini-stats">
+        <div class="mini-stat reveal fade-up">
+          <h3>850+</h3>
+          <p>Projects Done</p>
+        </div>
+        <div class="mini-stat reveal fade-up delay-1">
+          <h3>520+</h3>
+          <p>Happy Clients</p>
+        </div>
+        <div class="mini-stat reveal fade-up delay-2">
+          <h3>25+</h3>
+          <p>Awards Won</p>
+        </div>
+        <div class="mini-stat reveal fade-up delay-3">
+          <h3>20+</h3>
+          <p>Countries</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-title reveal fade-up">
+        <span class="subtitle">Recent Work</span>
+        <h2>Projects We're Proud Of</h2>
+        <p>Click through categories to explore our diverse work.</p>
+      </div>
+
+      <div class="portfolio-filter reveal fade-up">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="web">Web</button>
+        <button data-filter="app">Apps</button>
+        <button data-filter="branding">Branding</button>
+        <button data-filter="marketing">Marketing</button>
+      </div>
+
+      <div class="portfolio-grid" id="portfolioGrid">
+        <div class="portfolio-item reveal zoom-in" data-category="web">
+          <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80" alt="E-Commerce Platform" loading="lazy" />
+          <div class="portfolio-overlay">
+            <div class="arrow-btn"><i class="fas fa-arrow-up-right-from-square"></i></div>
+            <span>Web Development</span>
+            <h3>E-Commerce Platform</h3>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal zoom-in delay-1" data-category="app">
+          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80" alt="Fitness App" loading="lazy" />
+          <div class="portfolio-overlay">
+            <div class="arrow-btn"><i class="fas fa-arrow-up-right-from-square"></i></div>
+            <span>Mobile App</span>
+            <h3>Fitness Tracker</h3>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal zoom-in delay-2" data-category="branding">
+          <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&q=80" alt="Brand Identity" loading="lazy" />
+          <div class="portfolio-overlay">
+            <div class="arrow-btn"><i class="fas fa-arrow-up-right-from-square"></i></div>
+            <span>Branding</span>
+            <h3>Brand Identity System</h3>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal zoom-in" data-category="web">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Analytics Dashboard" loading="lazy" />
+          <div class="portfolio-overlay">
+            <div class="arrow-btn"><i class="fas fa-arrow-up-right-from-square"></i></div>
+            <span>Web Design</span>
+            <h3>Analytics Dashboard</h3>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal zoom-in delay-1" data-category="app">
+          <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&q=80" alt="Banking App" loading="lazy" />
+          <div class="portfolio-overlay">
+            <div class="arrow-btn"><i class="fas fa-arrow-up-right-from-square"></i></div>
+            <span>Mobile App</span>
+            <h3>Digital Banking App</h3>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal zoom-in delay-2" data-category="branding">
+          <img src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?w=800&q=80" alt="Logo Design" loading="lazy" />
+          <div class="portfolio-overlay">
+            <div class="arrow-btn"><i class="fas fa-arrow-up-right-from-square"></i></div>
+            <span>Branding</span>
+            <h3>Premium Logo Design</h3>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal zoom-in" data-category="marketing">
+          <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&q=80" alt="SEO Campaign" loading="lazy" />
+          <div class="portfolio-overlay">
+            <div class="arrow-btn"><i class="fas fa-arrow-up-right-from-square"></i></div>
+            <span>Marketing</span>
+            <h3>SEO Growth Campaign</h3>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal zoom-in delay-1" data-category="marketing">
+          <img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=800&q=80" alt="Social Media" loading="lazy" />
+          <div class="portfolio-overlay">
+            <div class="arrow-btn"><i class="fas fa-arrow-up-right-from-square"></i></div>
+            <span>Marketing</span>
+            <h3>Social Media Strategy</h3>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal zoom-in delay-2" data-category="web">
+          <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80" alt="SaaS Platform" loading="lazy" />
+          <div class="portfolio-overlay">
+            <div class="arrow-btn"><i class="fas fa-arrow-up-right-from-square"></i></div>
+            <span>Web Development</span>
+            <h3>SaaS Platform</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 0 0 var(--space-2xl);">
+    <div class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <div>
+            <h2>Want Your Project Featured Here?</h2>
+            <p>Let's discuss your vision and bring it to life.</p>
+          </div>
+          <a href="contact.html" class="btn btn-white">
+            Start a Project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo">
+            <span class="logo-mark"><i class="fas fa-cube"></i></span>
+            Corp<span>X</span>
+          </a>
+          <p>Empowering businesses with innovative digital solutions since 2014. Your success is our mission.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+            <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+            <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Web Development</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Mobile Apps</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> UI/UX Design</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Digital Marketing</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Cloud Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-location-dot"></i> 123 Business Avenue, Dhaka 1207, Bangladesh</li>
+            <li><i class="fas fa-phone"></i> +880 1234 567 890</li>
+            <li><i class="fas fa-envelope"></i> info@corpx.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CorpX. All rights reserved.</p>
+        <p>Made with <i class="fas fa-heart" style="color:#ef4444;"></i> by <a href="#">CorpX Team</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/scroll-animation.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

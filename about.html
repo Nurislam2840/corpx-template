@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | CorpX — Innovative Business Solutions</title>
+  <meta name="description" content="Learn about CorpX — a team of 65+ experts delivering innovative digital solutions since 2014. Our mission, vision, and values." />
+  <meta name="keywords" content="about corpx, company, team, mission, vision" />
+  <link rel="canonical" href="https://corpx.com/about.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Us | CorpX" />
+  <meta property="og:description" content="Learn about CorpX — trusted by 500+ companies worldwide." />
+  <meta property="og:type" content="website" />
+
+  <meta name="theme-color" content="#4f46e5" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%234f46e5'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='55' font-weight='bold' fill='white' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+
+  <style>
+    /* Page Hero */
+    .page-hero {
+      background: var(--grad-hero);
+      padding: 120px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--grad-mesh);
+      opacity: 0.7;
+    }
+    .page-hero .container { position: relative; z-index: 2; }
+    .page-hero h1 {
+      color: #fff;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      margin-bottom: 16px;
+      font-weight: 800;
+    }
+    .page-hero p {
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: var(--fs-lg);
+    }
+    .breadcrumb {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+      font-size: var(--fs-sm);
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .breadcrumb a { color: var(--accent-light); }
+    .breadcrumb i { font-size: 10px; }
+
+    /* Mission Cards */
+    .mission-card {
+      background: #fff;
+      padding: var(--space-lg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+    }
+    .mission-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--grad-primary);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition);
+    }
+    .mission-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-md);
+    }
+    .mission-card:hover::before { transform: scaleX(1); }
+    .mission-card .icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(6,182,212,0.1));
+      color: var(--primary);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: var(--space-md);
+      transition: var(--transition);
+    }
+    .mission-card:hover .icon {
+      background: var(--grad-primary);
+      color: #fff;
+      transform: rotate(-6deg) scale(1.08);
+    }
+    .mission-card h3 {
+      font-size: var(--fs-xl);
+      margin-bottom: 12px;
+    }
+    .mission-card p { margin: 0; }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--primary), var(--accent));
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 50px;
+      display: grid;
+      grid-template-columns: 1fr 60px 1fr;
+      align-items: center;
+      gap: 20px;
+    }
+    .timeline-item:nth-child(even) .timeline-content { grid-column: 3; text-align: left; }
+    .timeline-item:nth-child(even) .timeline-year { grid-column: 3; text-align: right; }
+    .timeline-item:nth-child(odd) .timeline-content { grid-column: 1; text-align: right; }
+    .timeline-item:nth-child(odd) .timeline-year { grid-column: 1; text-align: left; }
+    .timeline-dot {
+      grid-column: 2;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border: 4px solid var(--primary);
+      border-radius: 50%;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 0 0 6px rgba(79,70,229,0.1);
+    }
+    .timeline-content {
+      background: #fff;
+      padding: 20px 24px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+    }
+    .timeline-year {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      font-weight: 800;
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .timeline-content h4 { margin-bottom: 6px; font-size: var(--fs-lg); }
+    .timeline-content p { margin: 0; font-size: var(--fs-sm); }
+
+    /* Team */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-md);
+    }
+
+    /* Values */
+    .value-item {
+      display: flex;
+      gap: 20px;
+      padding: 24px;
+      background: #fff;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+    .value-item:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(79,70,229,0.2);
+    }
+    .value-item .icon {
+      width: 55px;
+      height: 55px;
+      flex-shrink: 0;
+      background: var(--grad-primary);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.25rem;
+    }
+    .value-item h4 { margin-bottom: 6px; font-size: var(--fs-base); }
+    .value-item p { margin: 0; font-size: var(--fs-sm); }
+
+    @media (max-width: 992px) {
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .timeline::before { left: 20px; }
+      .timeline-item {
+        grid-template-columns: 40px 1fr;
+        gap: 15px;
+      }
+      .timeline-item:nth-child(even) .timeline-content,
+      .timeline-item:nth-child(odd) .timeline-content {
+        grid-column: 2;
+        text-align: left;
+      }
+      .timeline-item:nth-child(even) .timeline-year,
+      .timeline-item:nth-child(odd) .timeline-year {
+        grid-column: 2;
+        text-align: left;
+        font-size: 1.35rem;
+        margin-bottom: 6px;
+      }
+      .timeline-dot { grid-column: 1; margin: 0; }
+      .timeline-item { display: grid; }
+      .timeline-item .timeline-year { order: -1; }
+    }
+    @media (max-width: 480px) {
+      .team-grid { grid-template-columns: 1fr; }
+      .page-hero { padding: 90px 0 60px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-info">
+        <a href="tel:+8801234567890"><i class="fas fa-phone-volume"></i> +880 1234 567 890</a>
+        <a href="mailto:info@corpx.com"><i class="fas fa-envelope"></i> info@corpx.com</a>
+      </div>
+      <div class="topbar-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <span class="logo-mark"><i class="fas fa-cube"></i></span>
+        Corp<span>X</span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary"><i class="fas fa-rocket"></i> Get Started</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>About CorpX</h1>
+      <p>Empowering businesses with innovative digital solutions since 2014</p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>About Us</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image reveal fade-left">
+          <div class="about-image-main">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80" alt="CorpX team" loading="lazy" />
+          </div>
+          <div class="about-image-badge">
+            <h3>10+</h3>
+            <p>Years of<br />Excellence</p>
+          </div>
+        </div>
+
+        <div class="about-content reveal fade-right">
+          <span class="subtitle">Our Story</span>
+          <h2>We Turn Bold Ideas Into Digital Reality</h2>
+          <p>
+            Founded in 2014, CorpX started with a simple mission — help businesses
+            succeed in the digital age. Today, we're a team of 65+ passionate
+            experts serving 500+ clients across 20+ countries.
+          </p>
+          <p>
+            From startups to Fortune 500 companies, we've built a reputation for
+            delivering exceptional results with integrity, innovation, and a
+            relentless focus on our clients' success.
+          </p>
+
+          <ul class="about-list">
+            <li><i class="fas fa-check"></i> Global Client Base</li>
+            <li><i class="fas fa-check"></i> Award-Winning Team</li>
+            <li><i class="fas fa-check"></i> 24/7 Dedicated Support</li>
+            <li><i class="fas fa-check"></i> Transparent Pricing</li>
+          </ul>
+
+          <a href="contact.html" class="btn btn-primary">
+            Work With Us <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission / Vision / Values -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-title reveal fade-up">
+        <span class="subtitle">What Drives Us</span>
+        <h2>Our Mission, Vision & Values</h2>
+        <p>The principles that guide everything we do.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="mission-card reveal fade-up">
+          <div class="icon"><i class="fas fa-bullseye"></i></div>
+          <h3>Our Mission</h3>
+          <p>To empower businesses of all sizes with innovative, accessible, and effective digital solutions that drive measurable growth.</p>
+        </div>
+
+        <div class="mission-card reveal fade-up delay-1">
+          <div class="icon"><i class="fas fa-eye"></i></div>
+          <h3>Our Vision</h3>
+          <p>To be the world's most trusted partner for digital transformation, known for excellence, innovation, and lasting impact.</p>
+        </div>
+
+        <div class="mission-card reveal fade-up delay-2">
+          <div class="icon"><i class="fas fa-heart"></i></div>
+          <h3>Our Values</h3>
+          <p>Integrity, innovation, collaboration, and excellence guide every project we undertake and every relationship we build.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title reveal fade-up">
+        <span class="subtitle">Our Journey</span>
+        <h2>Milestones That Shaped Us</h2>
+        <p>A decade of growth, innovation, and impact.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal fade-up">
+          <div class="timeline-year">2014</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>Founded in Dhaka</h4>
+            <p>Started with 3 founders and a shared vision for digital excellence.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal fade-up">
+          <div class="timeline-year">2017</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>Crossed 100 Clients</h4>
+            <p>Expanded services to include mobile apps and cloud solutions.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal fade-up">
+          <div class="timeline-year">2020</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>Global Expansion</h4>
+            <p>Opened offices in 3 countries and launched remote-first operations.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal fade-up">
+          <div class="timeline-year">2025</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>500+ Success Stories</h4>
+            <p>Serving clients across 20+ countries with a 98% satisfaction rate.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-title reveal fade-up">
+        <span class="subtitle">Our Team</span>
+        <h2>Meet the Experts</h2>
+        <p>Talented people making great things happen.</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card reveal fade-up">
+          <div class="team-image">
+            <img src="https://i.pravatar.cc/400?img=12" alt="Rahim Ahmed" loading="lazy" />
+            <div class="team-social">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="team-info">
+            <h4>Rahim Ahmed</h4>
+            <p>Founder & CEO</p>
+          </div>
+        </div>
+
+        <div class="team-card reveal fade-up delay-1">
+          <div class="team-image">
+            <img src="https://i.pravatar.cc/400?img=32" alt="Sarah Khan" loading="lazy" />
+            <div class="team-social">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="team-info">
+            <h4>Sarah Khan</h4>
+            <p>Chief Designer</p>
+          </div>
+        </div>
+
+        <div class="team-card reveal fade-up delay-2">
+          <div class="team-image">
+            <img src="https://i.pravatar.cc/400?img=15" alt="Karim Hassan" loading="lazy" />
+            <div class="team-social">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="team-info">
+            <h4>Karim Hassan</h4>
+            <p>Lead Developer</p>
+          </div>
+        </div>
+
+        <div class="team-card reveal fade-up delay-3">
+          <div class="team-image">
+            <img src="https://i.pravatar.cc/400?img=47" alt="Nadia Islam" loading="lazy" />
+            <div class="team-social">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="team-info">
+            <h4>Nadia Islam</h4>
+            <p>Marketing Head</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding: 0 0 var(--space-2xl);">
+    <div class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <div>
+            <h2>Let's Build Something Great Together</h2>
+            <p>Get a free consultation and start your project today.</p>
+          </div>
+          <a href="contact.html" class="btn btn-white">
+            Contact Us <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo">
+            <span class="logo-mark"><i class="fas fa-cube"></i></span>
+            Corp<span>X</span>
+          </a>
+          <p>Empowering businesses with innovative digital solutions since 2014. Your success is our mission.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+            <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+            <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Web Development</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Mobile Apps</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> UI/UX Design</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Digital Marketing</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Cloud Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-location-dot"></i> 123 Business Avenue, Dhaka 1207, Bangladesh</li>
+            <li><i class="fas fa-phone"></i> +880 1234 567 890</li>
+            <li><i class="fas fa-envelope"></i> info@corpx.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CorpX. All rights reserved.</p>
+        <p>Made with <i class="fas fa-heart" style="color:#ef4444;"></i> by <a href="#">CorpX Team</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/scroll-animation.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

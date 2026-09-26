@@ -1,0 +1,226 @@
+/* ===========================
+   CorpX v2.0 - Responsive
+   =========================== */
+
+/* ---- 1200px ---- */
+@media (max-width: 1200px) {
+  :root {
+    --fs-4xl: 2.75rem;
+    --fs-3xl: 2.25rem;
+  }
+  .hero-inner { gap: 40px; }
+  .hero-orbit { width: 320px; height: 320px; }
+  .hero-orbit-core { width: 120px; height: 120px; font-size: 2rem; }
+}
+
+/* ---- 992px ---- */
+@media (max-width: 992px) {
+  :root {
+    --space-2xl: 4rem;
+    --space-xl: 2.5rem;
+    --fs-4xl: 2.25rem;
+    --fs-3xl: 1.875rem;
+    --fs-2xl: 1.5rem;
+  }
+
+  .nav-toggle { display: block; }
+
+  .nav-menu {
+    position: fixed;
+    top: var(--navbar-height);
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - var(--navbar-height));
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    transition: left 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  .nav-menu.active { left: 0; }
+
+  .nav-menu li { width: 100%; }
+
+  .nav-menu a {
+    display: block;
+    padding: 14px 18px;
+    font-size: var(--fs-base);
+    border-radius: var(--radius-sm);
+    width: 100%;
+  }
+
+  .nav-cta .btn { display: none; }
+
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-visual { display: none; }
+
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+
+  .counter-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-sm); }
+  .counter-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px; }
+  .counter-item:nth-child(3), .counter-item:nth-child(4) { border-bottom: none; }
+
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .about-grid { grid-template-columns: 1fr; gap: var(--space-lg); }
+  .about-image { max-width: 500px; margin: 0 auto; }
+  .about-image-badge { padding: 20px 24px; bottom: -15px; right: -15px; }
+  .about-image-badge h3 { font-size: 2rem; }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--space-lg); }
+
+  .cta-content { padding: 0 20px; }
+}
+
+/* ---- 768px ---- */
+@media (max-width: 768px) {
+  :root {
+    --space-2xl: 3rem;
+    --space-xl: 2.25rem;
+    --space-lg: 1.75rem;
+    --fs-4xl: 2rem;
+    --fs-3xl: 1.625rem;
+    --fs-2xl: 1.375rem;
+    --fs-xl: 1.25rem;
+    --navbar-height: 70px;
+  }
+
+  .container { padding: 0 18px; }
+
+  /* Topbar */
+  .topbar { padding: 8px 0; font-size: 11px; }
+  .topbar .container { justify-content: center; }
+  .topbar-info { gap: 14px; justify-content: center; }
+  .topbar-info a { font-size: 11px; }
+  .topbar-social { display: none; }
+
+  /* Navbar */
+  .logo { font-size: 1.5rem; }
+  .logo-mark { width: 34px; height: 34px; font-size: 1rem; }
+
+  /* Hero */
+  .hero { min-height: auto; padding: 60px 0 70px; }
+  .hero-badge { font-size: 11px; padding: 6px 14px; margin-bottom: 18px; }
+  .hero h1 { font-size: 1.85rem; line-height: 1.15; margin-bottom: 18px; }
+  .hero p { font-size: 0.95rem; margin-bottom: 24px; }
+  .hero-buttons { flex-direction: column; gap: 10px; margin-bottom: 30px; }
+  .hero-buttons .btn { width: 100%; padding: 13px 22px; }
+  .hero-stats { gap: 20px; padding-top: 24px; }
+  .hero-stat h3 { font-size: 1.5rem; }
+  .hero-stat p { font-size: 10px; letter-spacing: 1px; }
+
+  /* Trusted */
+  .trusted-by { padding: 24px 0; }
+  .trusted-logos { gap: 30px; }
+  .trusted-logos span { font-size: 1rem; }
+  .trusted-label { font-size: 10px; }
+
+  /* Section Title */
+  .section-title { margin-bottom: 2rem; }
+  .section-title h2 { font-size: 1.5rem; }
+  .section-title p { font-size: var(--fs-sm); }
+  .section-title .subtitle { font-size: 10px; padding: 6px 14px; }
+
+  /* Grids */
+  .grid-3, .grid-2 { grid-template-columns: 1fr; }
+
+  /* Feature / Service */
+  .feature-card, .service-card { padding: 1.5rem; }
+  .feature-card .icon, .service-card .icon { width: 56px; height: 56px; font-size: 1.25rem; margin-bottom: 16px; }
+  .feature-card h3, .service-card h3 { font-size: 1.125rem; }
+
+  /* About */
+  .about-content h2 { font-size: 1.5rem; }
+  .about-list { grid-template-columns: 1fr; gap: 10px; }
+  .about-image-badge { padding: 16px 20px; bottom: -12px; right: -12px; }
+  .about-image-badge h3 { font-size: 1.5rem; }
+  .about-image-badge p { font-size: 9px; letter-spacing: 0.5px; }
+
+  /* Counter */
+  .counter-number { font-size: 2rem; }
+  .counter-item .icon-wrap { width: 56px; height: 56px; font-size: 1.25rem; }
+  .counter-item p { font-size: 10px; letter-spacing: 1px; }
+
+  /* Portfolio */
+  .portfolio-filter { gap: 8px; margin-bottom: 1.5rem; }
+  .portfolio-filter button { padding: 8px 16px; font-size: 12px; }
+  .portfolio-grid { grid-template-columns: 1fr; }
+
+  /* Testimonial */
+  .testimonial-card { padding: 1.5rem; }
+
+  /* Blog */
+  .blog-content { padding: 1.25rem; }
+
+  /* CTA */
+  .cta-section {
+    padding: 2.5rem 0;
+    margin: 0 16px;
+    border-radius: var(--radius);
+  }
+  .cta-content {
+    padding: 0 16px;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .cta-content h2 { font-size: 1.375rem; margin-bottom: 12px; }
+  .cta-content p { font-size: 0.9rem; margin-bottom: 20px; }
+  .cta-content .btn { width: 100%; }
+
+  /* Footer */
+  .footer { padding-top: 3rem; }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    flex-direction: column;
+  }
+
+  /* Back to Top */
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+}
+
+/* ---- 480px ---- */
+@media (max-width: 480px) {
+  :root {
+    --navbar-height: 64px;
+    --space-2xl: 2.5rem;
+    --space-xl: 2rem;
+  }
+
+  .container { padding: 0 16px; }
+
+  .logo { font-size: 1.35rem; }
+  .logo-mark { width: 30px; height: 30px; font-size: 0.9rem; }
+
+  .hero { padding: 50px 0 60px; }
+  .hero h1 { font-size: 1.625rem; }
+  .hero p { font-size: 0.9rem; }
+  .hero-stat h3 { font-size: 1.35rem; }
+
+  .counter-grid { grid-template-columns: 1fr; }
+  .counter-item { border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .counter-item:last-child { border-bottom: none; }
+
+  .btn { padding: 12px 22px; font-size: 13px; }
+  .section-title h2 { font-size: 1.35rem; }
+
+  .cta-section { margin: 0 12px; }
+}
